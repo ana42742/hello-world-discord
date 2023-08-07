@@ -29,7 +29,7 @@ async fn handler(bot: &ProvidedBot, msg: Message) {
 
     if user_message.contains("hello") {
         response = "Hello there! How can I help you today?";
-    } else if user_message.contains("explain image segmentation") {
+    } else if user_message.contains("image segmentation") {
         response = "Image segmentation is a computer vision task that divides an image into meaningful regions, grouping pixels with similar characteristics. It plays a vital role in object recognition and scene analysis. Popular methods include region-based, edge-based, and deep learning-based approaches, such as U-Net and Mask R-CNN.(Reference: R. C. Gonzalez and R. E. Woods, Digital Image Processing, 3rd Edition, 2007.)";
     } else if user_message.contains("ffmpeg") {
         response = "FFmpeg is a powerful open-source multimedia framework that facilitates audio and video processing, encoding, decoding, transcoding, and streaming. It supports a wide range of formats and codecs, making it a versatile tool for media manipulation. (Reference: FFmpeg official website - https://ffmpeg.org/about.html)";
