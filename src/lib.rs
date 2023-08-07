@@ -1,4 +1,4 @@
-use discord_flows::{model::Message, Bot, ChannelId, ProvidedBot};
+use discord_flows::{model::ChannelId, model::Message, Bot, ProvidedBot};
 use flowsnet_platform_sdk::logger;
 
 #[no_mangle]
