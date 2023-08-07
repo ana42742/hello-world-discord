@@ -25,7 +25,7 @@ async fn handler(bot: &ProvidedBot, msg: Message) {
 
     let channel_id = msg.channel_id;
     let user_message = msg.content.to_lowercase();
-    let response = "I'm sorry, I didn't understand your question.";
+    let mut response = "I'm sorry, I didn't understand your question.";
 
     if user_message.contains("hello") {
         response = "Hello there! How can I help you today?";
