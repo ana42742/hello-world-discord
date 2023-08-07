@@ -1,4 +1,4 @@
-use discord_flows::{model::Message, Bot, ProvidedBot};
+use discord_flows::{model::Message, Bot, ChannelId, ProvidedBot};
 use flowsnet_platform_sdk::logger;
 
 #[no_mangle]
@@ -64,16 +64,6 @@ async fn handler(bot: &ProvidedBot, msg: Message) {
         send_response_to_discord(&discord, channel_id, response).await;
     }
 
-    async fn send_response_to_discord(discord: &Discord, channel_id: ChannelId, response: &str) {
-        _ = discord
-            .send_message(
-                channel_id.into(),
-                &serde_json::json!({
-                    "content": response
-                }),
-            )
-            .await;
-    }
     // let resp = format!("Welcome to flows.network.\nYou just said: '{}'.\nLearn more at: https://github.com/flows-network/hello-world\n", msg.content);
 
     // _ = discord
@@ -84,4 +74,15 @@ async fn handler(bot: &ProvidedBot, msg: Message) {
     //         }),
     //     )
     //     .await;
+}
+
+async fn send_response_to_discord(discord: &Discord, channel_id: ChannelId, response: &str) {
+    _ = discord
+        .send_message(
+            channel_id.into(),
+            &serde_json::json!({
+                "content": response
+            }),
+        )
+        .await;
 }
