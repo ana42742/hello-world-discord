@@ -1,13 +1,15 @@
-# Getting started with a Discord bot on flows.network
+# Creating a Discord bot using flows.network written in Rust
 
-This flow function acts as a Discord bot.
+Invite the bot to your server using [this link](https://discord.com/api/oauth2/authorize?client_id=1137997904599072843&permissions=0&scope=bot)
 
-1. [Create a Discord bot](https://flows.network/blog/discord-chat-bot-guide) and note down its *bot token*.
-2. Add the bot to a Discord server via the bot's URL.
-3. Fork this repo into your own GitHub account.
-4. Go to [Flows.network](https://flows.network/flow/new) to create a new flow.
-5. Import the forked repo from your account into flows.network.
-6. In the *Advanced* tab, enter a setting named `discord_token` and puts the *bot token* as its value.
-7. Build and deploy.
-8. Send a private message to the bot in the Discord server it resides.
+Example prompts include greetings as well as a few simple and interesting questions about image processing:
 
+`What is image segmentation?`
+
+`How can I perform object detection?`
+
+`What is FFMPEG?`
+
+A sample use-case of the bot:
+
+![screenshot](./figs/Screenshot%202023-08-07%20at%201.35.36%20PM.png)
